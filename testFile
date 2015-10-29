@@ -1,0 +1,11 @@
+ps -aux --sort -pcpu | less
+du --max-depth=1 | sort -nr
+
+cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
+cat /proc/cpuinfo | grep physical | uniq -c 
+
+echo $?
+
+sudo su -
+su dpsUser
+
